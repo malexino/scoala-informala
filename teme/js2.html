@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Homework</title>
+    <script>
+        function getDigits(str) { 
+            let num = str.replace(/[^0-9]/g, ''); 
+            return num;
+        }
+        function getLetters (str) {
+            let letter = str.replace(/[^a-zA-Z]/g, '');
+            return letter;
+        }
+        function getFirst5Letters(str) {
+            let letter = str.replace(/[^a-zA-Z]/g, '');
+            let res = letter.substring(0, 5);
+            return res;
+        }
+        function concatenate (str) {
+            let singleString = str.join('');
+            return singleString;
+        }
+        function getAllDigits (str) {
+            let singleString = str.toString().replace(/[^0-9]/g, '');
+            return singleString;
+        }
+        function invertAllStrings (str) {
+            let arr = [];
+            let newStr = '';
+            for (let i = str.length - 1; i >= 0; i--) {
+                newStr += str[i];
+                newStr.split('').reverse().join('');
+                arr.push[i];
+            }
+            return arr;
+        }
+        function factorial (n) {
+            if (n === 0 || n === 1) return 1;
+            for (let i = n - 1; i >= 1; i--) {
+                n *= i;
+            }
+            return n;
+        }
+        function cmmdc (a, b) {
+            let rest;
+            while (b != 0) {
+                rest = a % b;
+                a = b;
+                b = rest;
+            }
+            return a;
+        }
+        function cmmmc (a, b) {
+            let P=a*b;
+            let rest;
+            while (b!= 0) {
+                rest = a % b;
+                a = b;
+                b = rest;
+            }
+            return P/a;
+        }
+        function divizori (n) {
+            let arr = [];
+            for (let i = 2; i< n; i++) {
+                if (n % i === 0) {
+                    arr.push(i);
+                }
+            }
+            return arr;
+        }
+        function palindrom(number) {
+		    let rem, temp, final = 0;
+            temp = number;
+		    while (number>0) {
+			    rem = number%10;
+			    number = parseInt(number/10);
+			    final = final*10+rem;
+		    }
+            if (final != temp) {
+		        return false;
+	        }
+                return true;
+        }
+        function sort (srt) {
+            let arr = [];
+            for (let i = 0; i < srt.length; i++) {
+                if (srt[i] % 2 === 0){
+                    arr.push(srt[i]);
+                }
+            }
+            arr.sort(function(a, b) {return a - b;});
+            return arr;
+        }
+        function sortAscDesc (srt) {
+            let arr = [];
+            let arj = [];
+            for (let i = 0; i < srt.length; i++) {
+                if (srt[i] % 2 === 0){
+                    arr.push(srt[i]);
+                } else {
+                    arj.push(srt[i]);
+                }
+            }
+            arr.sort(function(a, b) {return a - b;});
+            arj.sort(function(a, b) {return b - a;});
+            srt = arr.concat (arj);
+            return srt;
+        }
+        function binarySearch(arr, value) {
+            let low = 0;
+            let mid = 0;
+            let high = arr.length - 1;
+            while (low <= high) {
+                mid = Math.floor ((low + high) / 2);
+                if (arr[mid] === value) {
+                    return true;
+                } else if (value > arr[mid]) {
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            }
+            return false;
+        }
+        function countBinarySearch (arr, value) {
+            let low = 0;
+            let mid = 0;
+            let high = arr.length - 1;
+            let count = 0;
+            while (low <= high) {
+                count ++;
+                mid = Math.floor ((low + high) / 2);
+                if (arr[mid] === value) {
+                    return count;
+                } else if (value > arr[mid]) {
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            }
+            return count;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
