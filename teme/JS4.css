@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    padding: 0;
+    margin: 0;
+}
+#topBar{
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 50px;
+}
+.pageContent{
+    max-width: 80%;;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 0;
+    justify-content: space-between;
+    height: 100%;
+    flex-wrap:wrap;
+    text-align: center;
+    background-color: yellowgreen;
+    border-radius: 10px;
+}
+input[type = text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-right: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type = number] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-right: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#addBtn {
+    background-color: #1877f2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+#addBtn:hover {
+    opacity: 0.7;
+}
+#editBtn {
+    background-color: #1877f2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+#editBtn:hover {
+    opacity: 0.7;
+}
+.editBtn2 {
+    background: none!important;
+    border: none;
+    padding: 0 !important;
+    cursor: pointer;
+}
+#agenda {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: yellowgreen;
+    width: 80%;
+    resize: both;
+    overflow: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+.delete, .edit{
+    width:20px;
+}
+.hidden{
+    display:none !important;
+}
+#agenda tr th:first-child {
+    width: 50%;
+}
+#agenda tr th:nth-child(2) {
+    width: 30%;
+}
+#agenda tr th:nth-child(3) {
+    width: 10%;
+}
+#agenda tr th:last-child {
+    width: 10%;
+}
+#agenda tr td:first-child {
+    width: 50%;
+}
+#agenda tr td:nth-child(2) {
+    width: 30%;
+}
+#agenda tr td:nth-child(3) {
+    width: 10%;
+}
+#agenda tr td:last-child {
+    width: 10%;
+}

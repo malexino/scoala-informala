@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Telefonica</title>
+    <link rel="stylesheet" href="JS4.css">
+    <script src="JS4.js"></script>
+</head>
+<body onload="draw();">
+    <div id="topBar">
+        <h1>Agenda Telefonica</h1>
+    </div>
+    <div class="pageContent">
+        <form onsubmit="event.preventDefault(); adauga();" class="formular">
+            <label>Nume:</label>
+            <input type="text" id="name" name="name" placeholder="Nume" value="">
+            <label>Numar:</label>
+            <input type="number" id="number" name="number" placeholder="Numar" value=""><br>
+            <input id="addBtn" type="submit" value="Adauga Contact"/>
+            <input id="editBtn" type="button" onclick="edit2();" class="hidden" value="Adauga Contact"/>
+          </form>
+    </div>
+    <table id="agenda" style="border-collapse: collapse;">
+        <thead id="headTable">
+			<tr>
+				<th>Nume</th>
+                <th>Numar</th>
+                <th>Editare</th>
+                <th>Stergere</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+    </table>
+</body>
+</html>
