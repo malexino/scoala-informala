@@ -18,12 +18,6 @@ function draw(){
     }
     document.querySelector("#agenda tbody").innerHTML = str;
 }
-function onKey(elem,event){
-    if(elem.value.length>=10 || 
-        (event.key>="0" && event.key<="9")){
-        event.preventDefault();
-    }
-}
 function adauga(){
     let nume = document.querySelector("[name='name']").value;
     let numar = document.querySelector("[name='number']").value;
