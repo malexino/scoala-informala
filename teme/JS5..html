@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="JS5.css">
+    <script src="JS5.js"></script>
+</head>
+<body onload="draw()">
+    <div id="topBar">
+        <h1>Shopping List</h1>
+    </div>
+    <div class="pageContent">
+        <form onsubmit="event.preventDefault();" id = "formular" class="formular">
+            <label>Product:</label>
+            <input type="text" id="item" name="item" placeholder="Item" value="">
+            <input id="addBtn" type="submit" onclick="adding();" value="Add Item"/><br>
+            <input id="ascBtn" type="button" onclick = "sortAsc();" value="Sort asc"/>
+            <input id="dscBtn" type="button" onclick = "sortDsc()" value="Sort dsc"/>
+          </form>
+    </div>
+    <table id="tabel">
+        <thead id="capTabel" class="hidden">
+			<tr>
+				<th>Item Description</th>
+                <th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+    </table>
+</body>
+</html>
