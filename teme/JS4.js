@@ -31,7 +31,7 @@ function adauga(){
         draw();
         document.getElementById('name').value='';
         document.getElementById('number').value='';
-        document.querySelector("#headTable").classList.remove("hidden1");
+        document.querySelector("#headTable").classList.remove("hidden");
     }
 }
 function edit(idx){
@@ -52,6 +52,8 @@ function edit2(){
     draw();
     document.getElementById('name').value='';
     document.getElementById('number').value='';
+    document.querySelector("#editBtn").classList.add("hidden");
+    document.querySelector("#addBtn").classList.remove("hidden");
 }
 function del(idx) {
     if (confirm (`Esti sigur ca vrei sa stergi inregistrarea cu numele ${inregistrari[idx].nume} ?`))
