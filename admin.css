@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+}
+.hidden {
+    display: none !important;
+}
+.lds-ripple div{
+    border-color: #00a6bc;
+  }
+#loading{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+}
+.topBar {
+    background-color: #1a73e8;
+    width: 100%;
+    min-height: 70px;
+    display: inline;
+}
+.pageContent {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.logo{
+    margin: 0 25px;
+    padding: 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+.pageContent .textLogo {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
+.pageContent .textLogo:hover {
+    opacity: 0.8;
+}
+.contFoot a {
+    text-decoration: none;
+    color: white;
+    float: right;
+    margin: 0 15px;
+    padding: 0;
+}
+.contFoot a:hover {
+    opacity: 0.8;
+}
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 0 auto 0 auto;
+    border: 1px solid lightgray;
+    max-width: 600px;
+    max-height: 800px;
+    border-radius: 5px;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+input[type=text], input[type=number], select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+input[type=text]:focus, input[type=number]:focus, select:focus {
+    border: 1px solid #1a73e8;
+    box-shadow: inset 0px 0px 3px #1a73e8;
+}
+.save, .quit, .edit, .delete, .modify {
+    border: none;
+    border-radius: 5px;
+    background-color: #1a73e8;
+    color: white;
+    margin: 15px 15px;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.save, .modify {
+    background-color: #415a94;
+}
+.quit, .delete {
+    background-color: #bb3c3e;
+}
+.edit:hover, .save:hover, .quit:hover, .delete:hover, .modify:hover {
+    opacity: 0.8;
+}
+#main #pageContent {
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    border-radius: 5px;
+    max-width: 100%;
+    display: grid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+    margin: 5px;
+    padding: 0;
+}
+#firstTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #ddd;
+    font-style: italic;
+    border-radius: 5px;
+}
+#firstTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#firstTable tr th:first-child, #firstTable tr td:first-child {
+    width: 10%;
+}
+#firstTable tr th:nth-child(2), #firstTable tr td:nth-child(2) {
+    width: 10%;
+}
+#firstTable tr th:nth-child(3), #firstTable tr td:nth-child(3) {
+    width: 10%;
+}
+#firstTable tr th:nth-child(4), #firstTable tr td:nth-child(4) {
+    width: 10%;
+}
+#firstTable tr th:nth-child(5), #firstTable tr td:nth-child(5) {
+    width: 20%;
+}
+#firstTable tr th:nth-child(6), #firstTable tr td:nth-child(6) {
+    width: 10%;
+}
+#firstTable tr th:nth-child(7), #firstTable tr td:nth-child(7) {
+    width: 10%;
+}
+#firstTable tr th:last-child, #firstTable tr td:last-child {
+    width: 10%;
+}
+footer {
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    max-height: 70px;
+    width: 100%;
+    background-color: #223031;
+}
+footer ul {
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerList li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 0;
+    font-size: 14px;
+}
+.footerList li a:hover {
+    opacity: 0.8;
+}

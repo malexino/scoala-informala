@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="proiect.js"></script>
+</head>
+<body onload="getAllProducts()">
+    <div id="loading" class="lds-ripple"><div></div><div></div></div>
+    <header class="topBar">
+		<div class="pageContent">
+			<div class="logo"><a href="index.html" class="textLogo">Online Shop</a></div>
+			<div class="contFoot">
+                <a href="#id01" onclick="removeClass1()"><i class="fa fa-fw fa-user"></i> Admin</a>
+				<a href="cart.html"><i class="fa fa-fw fa-shopping-cart"></i> Cart</a>
+			</div>
+            <div id="id01" class="modal hidden">
+                <form class="modal-content animate" action="/action_page.php" method="post">
+                  <div class="imgcontainer">
+                    <img src="img_avatar.png" alt="Avatar" class="avatar">
+                  </div>
+                  <div class="modalContainer">
+                    <input type="text" placeholder="Enter User..." name="uname"><br>
+                    <input type="password" placeholder="Enter Password..." name="psw"><br>
+                    <button type="button" class="logBtn" onclick="window.location.href = 'admin.html'"><i class="fa fa-fw fa-sign-in"></i> Login</button>
+                    <button type="button" class="cancelBtn" onclick="window.location.href = 'index.html'"><i class="fa fa-fw fa-lock"></i> Cancel</button>
+                  </div>
+                </form>
+            </div>
+		</div>
+	</header>
+    <section id="main">
+        <div id="pageContent">
+            
+        </div>
+    </section>
+    <footer>
+        <ul class="footerList container">
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Terms & Conditions </a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

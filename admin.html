@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop - Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="proiect.js"></script>
+</head>
+<body onload="getProducts();">
+    <div id="loading" class="lds-ripple"><div></div><div></div></div>
+    <header class="topBar">
+		<div class="pageContent">
+			<div class="logo"><a href="index.html" class="textLogo">Online Shop</a></div>
+			<div class="contFoot">
+                <a href="index.html"><i class="fa fa-fw fa-sign-out"></i> Logout</a>
+                <a href="#id02" onclick="removeClass2()"><i class="fa fa-fw fa-plus"></i> Add Product</a>
+			</div>
+            <div id="id02" class="modal hidden">
+                <form class="modal-content animate" action="/action_page.php" method="post">
+                  <div class="container">
+                    <h2 class="logoPM">Product Addition</h2>
+                    <input type="text" placeholder="Enter Product Name..." name="name"><br>
+                    <label for="category"></label>
+                    <select id="category">
+                        <option value="">Enter Product Category...</option>
+                        <option value="Jeans">Jeans</option>
+                        <option value="Pants">Pants</option>
+                        <option value="TShirt">T Shirt</option>
+                        <option value="Skirt">Skirt</option>
+                        <option value="Dress">Dress</option>
+                        <option value="Jackets">Jackets</option>
+                    </select><br>
+                    <label for="size"></label>
+                    <select id="size">
+                        <option value="">Enter Product Size...</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select><br>
+                    <label for="color"></label>
+                    <select id="color">
+                        <option value="">Enter Product Color...</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                        <option value="Grey">Grey</option>
+                        <option value="Red">Red</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Yellow">Yellow</option>
+                    </select><br>
+                    <input type="text" placeholder="Enter Product Image..." name="picture"><br>
+                    <input type="text" placeholder="Enter Product Description..." name="description"><br>
+                    <input type="number" placeholder="Enter Product Price..." name="price"><br>
+                    <input type="number" placeholder="Enter Product Stock..." name="stock"><br>
+                    <button type="button" class="save" onclick="saveProduct(event)"><i class="fa fa-fw fa-save"></i> Save</button>
+                    <button type="button" class="quit" onclick="window.location.href = 'admin.html'"><i class="fa fa-fw fa-sign-out"></i> Cancel</button>
+                  </div>
+                </form>
+            </div>
+		</div>
+	</header>
+    <section id="main">
+        <div id="pageContent">
+                <table id="firstTable">
+                    <thead>
+                        <tr>
+                            <th>Nume</th>
+                            <th>Categorie</th>
+                            <th>Marime</th>
+                            <th>Culoare</th>
+                            <th>Descriere</th>
+                            <th>Pret(RON)</th>
+                            <th>Stoc</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+        </div>
+    </section>
+    <footer>
+        <ul class="footerList container">
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Terms & Conditions </a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

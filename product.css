@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+}
+.hidden {
+    display: none !important;
+}
+.lds-ripple div{
+    border-color: #00a6bc;
+  }
+#loading{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+}
+.topBar {
+    background-color: #1a73e8;
+    width: 100%;
+    min-height: 70px;
+    display: inline;
+}
+.pageContent {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.logo{
+    margin: 0 25px;
+    padding: 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+.pageContent .textLogo {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
+.pageContent .textLogo:hover {
+    opacity: 0.8;
+}
+.contFoot a {
+    text-decoration: none;
+    color: white;
+    float: right;
+    margin: 0 15px;
+    padding: 0;
+}
+.contFoot a:hover {
+    opacity: 0.8;
+}
+#main {
+    margin: 0 auto;
+    padding: 0;
+}
+.card {
+    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+.price {
+    color: grey;
+    font-size: 22px;
+}
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+.card button:hover {
+    opacity: 0.7;
+}
+.addCart {
+    border: none;
+    border-radius: 5px;
+    background-color: #1a73e8;
+    color: white;
+    margin: 15px 15px;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.addCart:hover {
+    opacity: 0.8;
+}
+.warning, .warning2{
+    margin: 10px 0;
+    color: rgb(212, 35, 35);
+    display: none;
+}
+footer {
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    max-height: 70px;
+    width: 100%;
+    background-color: #223031;
+}
+footer ul {
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerList li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 0;
+    font-size: 14px;
+}
+.footerList li a:hover {
+    opacity: 0.8;
+}
