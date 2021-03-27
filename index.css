@@ -3,6 +3,8 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 .hidden {
     display: none !important;
@@ -22,8 +24,13 @@ body {
 }
 .topBar {
     background-color: #1a73e8;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    max-height: 70px;
     width: 100%;
-    min-height: 70px;
     display: inline;
 }
 .topBar .pageContent {
@@ -127,12 +134,12 @@ input[type=text]:focus, input[type=password]:focus {
 .cancelBtn {
     background-color: #bb3c3e;
 }
-#main #pageContent {
+#pageContent {
     display: flex;
-    margin: 5px;
+    flex-wrap: wrap;
+    margin: 5px auto;
     padding: 0;
-    max-width: 100%;
-    max-height: 1200px;
+    max-width: 70%;
     text-align: center;
     border-radius: 5px;
   }
@@ -140,10 +147,10 @@ input[type=text]:focus, input[type=password]:focus {
     border: 1px solid lightgray;
     max-width: 300px;
     max-height: 400px;
-    margin: 5px;
+    margin: 5px auto;
     text-align: center;
     border-radius: 5px;
-    flex: 1 20%;
+    flex: 1 25%;
 }
 .productCard img {
     width: 100px;
