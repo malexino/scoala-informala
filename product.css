@@ -3,6 +3,8 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 .hidden {
     display: none !important;
@@ -22,8 +24,13 @@ body {
 }
 .topBar {
     background-color: #1a73e8;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    max-height: 70px;
     width: 100%;
-    min-height: 70px;
     display: inline;
 }
 .pageContent {
