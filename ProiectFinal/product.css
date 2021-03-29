@@ -91,8 +91,28 @@ body {
     width: 45%;
     border-radius: 5px;
 }
-#main img {
-    max-width: 100%;
+.details-info{
+    flex: 1;
+    margin-left: 20px;
+}
+.details-info ul{
+    padding: 0;
+    list-style-type: none;
+}
+.details-info li{
+    margin-bottom: 1rem;
+}
+#articleQuantity{
+    font-size: 16px;
+    height: 30px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 8px 0;
+}
+.left img {
+    max-width: 500px;
     max-height: 500px;
 }
 #main .cartBtn {
