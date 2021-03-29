@@ -1,114 +1,52 @@
 let dataStorage = 'https://online-shop-12368-default-rtdb.firebaseio.com/';
-let product = {};
-let list = {};
-let index = window.location.search.substr(4);
-let indexEdit = -1;
-async function ajax(dataStorage, method, body){
-    let response = await fetch(dataStorage + ".json",{
-        method: method, 
-        body: JSON.stringify(body),
-        headers: {
-            'Content-Type': 'application/json'
-            }
-    });
-    return await response.json();
-}
+let id = window.location.search.substr(4);
+let listaProduse = [];
+let produs = {};
+let cartStr = localStorage.getItem("cart");
+let cart = JSON.parse(cartStr);
+
 function removeClass1 () {
     var element = document.getElementById("id01");
     element.classList.remove("hidden");
 }
-function removeClass2 () {
-    var element = document.getElementById("id02");
-    element.classList.remove("hidden");
-}
-async function saveProduct() {
-    var c = document.getElementById("category");
-    var s = document.getElementById("size");
-    var l = document.getElementById("color");
-    let nume = document.querySelector("[name='name']").value;
-    let categorie = c.options[c.selectedIndex].value;
-    let marime = s.options[s.selectedIndex].value;
-    let culoare = l.options[l.selectedIndex].value;
-    let imagine = document.querySelector("[name='picture']").value;
-    let descriere = document.querySelector("[name='description']").value;
-    let pret = document.querySelector("[name='price']").value;
-    let stoc = document.querySelector("[name='stock']").value;
-    let newProd = {
-        "nume": nume,
-        "categorie": categorie,
-        "marime": marime,
-        "culoare": culoare,
-        "imagine": [imagine],
-        "descriere": descriere,
-        "pret": pret,
-        "stoc": stoc
-    };
-    const response = await fetch(dataStorage + index + ".json", {
-        method: "POST",
-        body: JSON.stringify(newProd),
-        headers: {
-            'Content-Type': 'aplication/json'
-        }
-    });
-    product = await response.json();
-    window.location = "admin.html";
-}
-async function getProducts() {
+async function getListaProduse() {
     document.querySelector("#loading").classList.remove("hidden");
-    const response = await fetch(dataStorage + index + ".json");
-    product = await response.json();
+    let response = await fetch (dataStorage + ".json");
+    listaProduse = await response.json();
     document.querySelector("#loading").classList.add("hidden");
-    drawAdmin();
+    drawProduse();
+    countCart();
 }
-async function getAllProducts() {
-    document.querySelector("#loading").classList.remove("hidden");
-    const response = await fetch(dataStorage + index + ".json");
-    product = await response.json();
-    document.querySelector("#loading").classList.add("hidden");
-    drawAllProducts();
-}
-async function getProduct() {
-    document.querySelector("#loading").classList.remove("hidden");
-    const response = await fetch(dataStorage + index + ".json");
-    product = await response.json();
-    drawProduct();
-    document.querySelector("#loading").classList.add("hidden");
-}
-function drawAdmin() {
+function drawProduse(){
     let str = "";
-    for (let [id, prod] of Object.entries(product)) {
-        str += `
-            <tr>
-                <td>${prod.nume}</td>
-                <td>${prod.categorie}</td>
-                <td>${prod.marime}</td>
-                <td>${prod.culoare}</td>
-                <td>${prod.descriere}</td>
-                <td>${prod.pret}</td>
-                <td>${prod.stoc}</td>
-                <td><button class="delete" onclick="removeProduct('${id}')"><i class="fa fa-fw fa-trash"></i> Delete</button></td>
-            </tr>
-        `
-    }
-    document.querySelector("#firstTable tbody").innerHTML = str;
-}
-function drawAllProducts() {
-    let str = "";
-    for (let [id, prod] of Object.entries(product)) {
-        str += `
+    for (let [i,produs] of Object.entries(listaProduse)) {
+        str+=`
             <div class="productCard">
-                <h2>${prod.nume}</h2>
-                <img src="${prod.imagine}" alt="Product Image"><br>
-                <button class="productDetails" onclick="getProduct('${id}')"><i class="fa fa-fw fa-info-circle"></i> Details</button>
+                    <h3>${produs.nume}</h3>
+                    <img src="${produs.imagine}" class="product-img" alt="${produs.nume}"/>
+                    <h4>${produs.pret}.00 RON</h4>
+                    <div class="viewBtn"><a class="viewButton" href="product.html?id=${i}">View</a></div>
             </div>
         `
     }
-    document.querySelector("#main #pageContent").innerHTML = str;
+    document.querySelector(".pageContent").innerHTML = str;
 }
-async function removeProduct(idx){
-    if(confirm(`Are you sure you want to remove ${product[idx].nume}?`)){ 
-        await ajax(dataStorage + idx, "DELETE")
-    }
-    getProducts();
-    window.location.href = 'admin.html';
+async function getProdus() {
+    document.querySelector("#loading").classList.remove("hidden");
+    let response = await fetch (dataStorage + id + ".json");
+    produs = await response.json();
+    document.querySelector("#loading").classList.add("hidden");
+    drawDetalii();
+}
+function drawDetalii() {
+    document.querySelector(".name").innerText = produs.nume;
+	document.querySelector(".picture").src = produs.imagine;
+    document.querySelector(".size").innerHTML = `<strong>Marime:</strong> ${produs.marime}`;
+    document.querySelector(".color").innerHTML = `<strong>Culoare:</strong> ${produs.culoare}`;
+    document.querySelector(".price").innerHTML = `<strong>Pret:</strong> ${produs.pret}.00 RON`;
+    document.querySelector(".stock").innerHTML = `<strong>In stoc:</strong> ${produs.stoc} buc`;
+    document.querySelector(".description").innerHTML = `
+    <p><strong>Descriere produs:</strong></p>
+    <p>${produs.descriere}</p>
+    `
 }
