@@ -69,56 +69,47 @@ body {
     opacity: 0.8;
 }
 #main {
-    margin: 0 auto;
+    margin: 15px;
     padding: 0;
-}
-.card {
-    border: 1px solid black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
+    max-width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
     text-align: center;
-    font-family: arial;
 }
-.price {
-    color: grey;
-    font-size: 22px;
+#main .card {
+    display: flex;
 }
-.card button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
+#main .left {
+    display: inline;
+    margin: 20px auto;
+    width: 45%;
+    border-radius: 5px;
 }
-.card button:hover {
-    opacity: 0.7;
+#main .right {
+    display: inline;
+    margin: 20px auto;
+    width: 45%;
+    border-radius: 5px;
 }
-.addCart {
+#main img {
+    max-width: 100%;
+    max-height: 500px;
+}
+#main .cartBtn {
     border: none;
     border-radius: 5px;
-    background-color: #1a73e8;
     color: white;
-    margin: 15px 15px;
-    padding: 10px 18px;
+    margin: 5px 5px;
+    padding: 5px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    background-color: #1a73e8;
     transition-duration: 0.4s;
     cursor: pointer;
 }
-.addCart:hover {
+#main .cartBtn:hover {
     opacity: 0.8;
-}
-.warning, .warning2{
-    margin: 10px 0;
-    color: rgb(212, 35, 35);
-    display: none;
 }
 footer {
     left: 0;
