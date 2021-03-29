@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="product.css">
     <script src="proiect.js"></script>
 </head>
-<body onload="getList()">
+<body onload="getProdus()">
     <div id="loading" class="lds-ripple"><div></div><div></div></div>
     <header class="topBar">
 		<div class="pageContent">
@@ -23,14 +23,18 @@
 	</header>
     <section id="main">
         <div class="card">
-            <img class="picture" src="" alt="Product Image" style="width:100%">
-            <h1 class="name"></h1>
-            <p class="size"></p>
-            <p class="color"></p>
-            <p class="price"></p>
-            <p class="description"></p>
-            <p class="stock"></p>
-            <p><button>Add to Cart</button></p>
+            <div class="left">
+                <img class="picture" src="" alt="Product Image" style="width:100%">
+            </div>
+            <div class="right">
+                <h1 class="name"></h1>
+                <p class="size"></p>
+                <p class="color"></p>
+                <p class="price"></p>
+                <p class="description"></p>
+                <p class="stock"></p>
+                <button type="button" onclick="addToCart()" class="cartBtn"><i class="fa fa-fw fa-shopping-cart"></i> Add to Cart</button>
+            </div>
         </div>
     </section>
     <footer>
