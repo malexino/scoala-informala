@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.hidden {
+    display: none !important;
+}
+.lds-ripple div{
+    border-color: #00a6bc;
+  }
+#loading{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+}
+.topBar {
+    background-color: #1a73e8;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    max-height: 70px;
+    width: 100%;
+    display: inline;
+}
+.topBar .pageContent {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.logo{
+    margin: 0 25px;
+    padding: 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+.pageContent .textLogo {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
+.pageContent .textLogo:hover {
+    opacity: 0.8;
+}
+.contFoot a {
+    text-decoration: none;
+    color: white;
+    float: right;
+    margin: 0 15px;
+    padding: 0;
+}
+.contFoot a:hover {
+    opacity: 0.8;
+}
+.product-cart {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 0;
+}
+.cart-item form {
+    display: grid;
+    grid-template-columns: 100%;
+    border: 1px solid #efefef;
+    margin: 1rem;
+    border-radius: 5px;
+}
+.cart-product {
+    display: grid;
+    grid-template-columns: 120px auto;
+    grid-gap: 0rem 1.3rem;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+}
+.cart-image {
+    height: 120px;
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cart-quantity-md, .cart-unit-price, .cart-product-subtotal, .cart-remove {
+    display: none;
+}
+.cart-controls-sm {
+    display: flex;
+    justify-content: space-between;
+    padding: .3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.remove {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #bb3c3e;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: var(--mainWhite);
+}
+.cart-quantity-controls-sm {
+    display: flex;
+}
+.cart-quantity-controls-sm button,
+.cart-quantity-controls-sm input,
+.cart-quantity-controls button,
+.cart-quantity-controls input {
+    height: 25px;
+    width: 25px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-left: .3rem;
+}
+.cart-quantity-controls-sm button, .cart-quantity-controls button {
+    background: var(--primaryColor);
+    color: var(--mainWhite);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+.cart-product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: .3rem;
+}
+.cart-price-sm {
+    font-weight: bold;
+    margin-bottom: .3rem;
+}
+.cart-total-holder {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.cart-total {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.cart-total p {
+    font-weight: bold;
+}
+.cart-action-button {
+    display: flex;
+    flex-direction: column;
+}
+#btn-main {
+    display: block;
+    text-align: center;
+    padding: .7rem;
+    margin-bottom: .5rem;
+    text-decoration: none;
+}
+#btn-main {
+    color: none;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 16px;;
+}
+#btn-main:hover{
+    opacity: 0.8;
+}
+.cart-header{
+    display: none;
+}
+.cart-title{
+    text-align: center;
+    font-style: italic;
+    color: darkslategrey;
+}
+footer {
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    max-height: 70px;
+    width: 100%;
+    background-color: #223031;
+}
+footer ul {
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerList li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 0;
+    font-size: 14px;
+}
+.footerList li a:hover {
+    opacity: 0.8;
+}
