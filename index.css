@@ -22,7 +22,7 @@ body {
     width: 60px;
     height: 60px;
 }
-.topBar {
+#topBar {
     background-color: #1a73e8;
     left: 0;
     top: 0;
@@ -33,7 +33,7 @@ body {
     width: 100%;
     display: inline;
 }
-.topBar .pageContent {
+#topBar #pageContent {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -43,19 +43,19 @@ body {
     flex-wrap: wrap;
     text-align: center;
 }
-.logo{
+#topBar .logo{
     margin: 0 25px;
     padding: 0;
     font-size: 40px;
     font-weight: bold;
     color: white;
 }
-.pageContent .textLogo {
+#pageContent .textLogo {
     text-decoration: none;
     color: white;
     font-style: italic;
 }
-.pageContent .textLogo:hover {
+#pageContent .textLogo:hover {
     opacity: 0.8;
 }
 .contFoot a {
@@ -111,7 +111,7 @@ input[type=text]:focus, input[type=password]:focus {
     border: 1px solid #1a73e8;
     box-shadow: inset 0px 0px 3px #1a73e8;
 }
-.productDetails, .logBtn, .cancelBtn {
+.logBtn, .cancelBtn {
     border: none;
     border-radius: 5px;
     background-color: #1a73e8;
@@ -125,7 +125,7 @@ input[type=text]:focus, input[type=password]:focus {
     transition-duration: 0.4s;
     cursor: pointer;
 }
-.productDetails:hover, .logBtn:hover, .cancelBtn:hover {
+.logBtn:hover, .cancelBtn:hover {
     opacity: 0.8;
 }
 .logBtn {
@@ -134,7 +134,7 @@ input[type=text]:focus, input[type=password]:focus {
 .cancelBtn {
     background-color: #bb3c3e;
 }
-#pageContent {
+.pageContent {
     display: flex;
     flex-wrap: wrap;
     margin: 5px auto;
@@ -147,16 +147,36 @@ input[type=text]:focus, input[type=password]:focus {
     border: 1px solid lightgray;
     max-width: 300px;
     max-height: 400px;
-    margin: 5px auto;
+    margin: 5px;
     text-align: center;
     border-radius: 5px;
     flex: 1 25%;
 }
 .productCard img {
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
     border: 1px solid lightgray;
     border-radius: 5px;
+}
+.productCard h3 {
+    font-style: italic;
+    color: darkslategrey;
+}
+.productCard .viewBtn {
+    margin: 10px 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 25px;
+}
+.productCard .viewButton {
+    text-decoration: none;
+    color: #1a73e8;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.productCard .viewButton:hover {
+    opacity: 0.8;
 }
 footer {
     left: 0;
