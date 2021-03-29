@@ -24,7 +24,7 @@
     <section id="main">
         <div class="card">
             <div class="left">
-                <img class="picture" src="" alt="Product Image" style="width:100%">
+                <img class="picture" src="" alt="Product Image">
             </div>
             <div class="right">
                 <h1 class="name"></h1>
@@ -33,7 +33,16 @@
                 <p class="price"></p>
                 <p class="description"></p>
                 <p class="stock"></p>
+                <strong>Cantitate:</strong><br>
+                <select title="Introduceţi nr. de bucăţi dorite" name="quantity" class="add_quantity_select" id="articleQuantity"> 								
+                    <option value="1" selected="selected">1</option>									
+                    <option value="2">2</option>									
+                    <option value="3">3</option>									
+                    <option value="4">4</option>									
+                    <option value="5">5</option>							
+                </select><br>
                 <button type="button" onclick="addToCart()" class="cartBtn"><i class="fa fa-fw fa-shopping-cart"></i> Add to Cart</button>
+                <div id ="toast"></div>
             </div>
         </div>
     </section>
