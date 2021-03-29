@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="loading.css">
     <link rel="stylesheet" href="cart.css">
 </head>
-<body>
+<body onload="drawCart()">
     <div id="loading" class="lds-ripple"><div></div><div></div></div>
     <header class="topBar">
 		<div class="pageContent">
@@ -19,9 +19,16 @@
 			</div>
 		</div>
 	</header>
-    <section id="main">
-
-    </section>
+    <main>
+        <div class="productCart">
+            <div class="wrapper">
+                <div class="cart-collection">
+                     <div class="cart-title">
+                         <h2>Shopping cart</h2>
+                     </div>
+                </div>
+         </div>
+    </main>
     <footer>
         <ul class="footerList container">
             <li><a href="#">Shipping & Returns</a></li>
