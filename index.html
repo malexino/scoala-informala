@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="index.css">
     <script src="proiect.js"></script>
 </head>
-<body onload="getAllProducts()">
+<body onload="getListaProduse()">
     <div id="loading" class="lds-ripple"><div></div><div></div></div>
-    <header class="topBar">
-		<div class="pageContent">
+    <header id="topBar">
+		<div id="pageContent">
 			<div class="logo"><a href="index.html" class="textLogo">Online Shop</a></div>
 			<div class="contFoot">
-                <a href="#id01" onclick="removeClass1()"><i class="fa fa-fw fa-user"></i> Admin</a>
+        <a href="#id01" onclick="removeClass1()"><i class="fa fa-fw fa-user"></i> Admin</a>
 				<a href="cart.html"><i class="fa fa-fw fa-shopping-cart"></i> Cart</a>
 			</div>
             <div id="id01" class="modal hidden">
@@ -34,11 +34,9 @@
             </div>
 		</div>
 	</header>
-    <section id="main">
-        <div id="pageContent">
+        <div class="pageContent">
             
         </div>
-    </section>
     <footer>
         <ul class="footerList container">
             <li><a href="#">Shipping & Returns</a></li>
