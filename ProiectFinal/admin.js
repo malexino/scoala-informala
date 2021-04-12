@@ -1,4 +1,4 @@
-let dataStorage = 'https://online-shop-12368-default-rtdb.firebaseio.com/';
+let dataStorage = 'https://online-shop-a707a-default-rtdb.europe-west1.firebasedatabase.app/';
 let product = {};
 let list = [];
 let index = window.location.search.substr(4);
